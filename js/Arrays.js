@@ -3,14 +3,42 @@ function GetPromedio(calificaciones) {
     var promedio = new Array(calificaciones.length);
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-    for (var i = 0; calificaciones.length; i++) {
-        promedio[i] = calificaciones[i].reduce(reducer);
+    for (var i = 0; i < calificaciones.length; i++) {
+        promedio[i] = calificaciones[i].reduce(reducer) / calificaciones[i].length;
     }
 
     return promedio;
 }
 
+function CountResult(calificaciones) {
+    var parcial = {
+        GeneralProm: [0, 0, 0, 0, 0, 0],
+        Reprobados: 0
+    };
 
+    for (var i = 0; i < calificaciones.length; i++) {
+        var calificacion = calificaciones[i];
+
+        if (calificacion < 7.0)
+            parcial.Reprobados++;
+
+        if (calificacion < 5) {
+            parcial.GeneralProm[0]++;
+        } else if (calificacion >= 5 && calificacion < 6) {
+            parcial.GeneralProm[1]++;
+        } else if (calificacion >= 6 && calificacion < 7) {
+            parcial.GeneralProm[2]++;
+        } else if (calificacion >= 7 && calificacion < 8) {
+            parcial.GeneralProm[3]++;
+        } else if (calificacion >= 8 && calificacion < 9) {
+            parcial.GeneralProm[4]++;
+        } else if (calificacion >= 9 && calificacion <= 10) {
+            parcial.GeneralProm[5]++;
+        }
+    }
+
+    return parcial;
+}
 
 
 function InfoPartials() {
@@ -38,25 +66,25 @@ function InfoPartials() {
         e) La distribución de las calificaciones finales (promedio), es decir:
     */
     var promedios = GetPromedio(calificaciones);
+    document.getElementById("reps").innerHTML = "";
+
 
     document.getElementById("reps").innerHTML += "Resultado <br>";
-
-    for (var i = 0; i < promedios.Promedios.length; i++) {
-        document.getElementById("reps").innerHTML += " " + promedios.Promedios[i] + "<br>";
+    for (var i = 0; i < promedios.length; i++) {
+        document.getElementById("reps").innerHTML += " " + promedios[i].toFixed(2) + "<br>";
     }
+    promedios.sort(function(a, b) { return a < b; }); // [ 1, 5, 40, 200 ]
+    document.getElementById("reps").innerHTML += "Promedio mas alto: " + promedios[0] + "<br>";
+    document.getElementById("reps").innerHTML += "Promedio mas bajo: " + promedios[promedios.length - 1] + "<br>";
 
-    promedios.Promedios.sort(function(a, b) { return a - b; }); // [ 1, 5, 40, 200 ]
+    var TablaResultados = CountResult(promedios);
 
-    document.getElementById("reps").innerHTML = "";
-    document.getElementById("reps").innerHTML += "Reprobados: " + promedios.Reprobados + "<br>";
-    document.getElementById("reps").innerHTML += "Promedio mas alto: " + promedios.Promedios[0] + "<br>";
-    document.getElementById("reps").innerHTML += "Promedio mas bajo: " + promedios.Promedios[promedios.Promedios.length - 1] + "<br>";
-
-    document.getElementById("reps").innerHTML += "0 – 49: " + promedios.GeneralProm[0] + "<br>";
-    document.getElementById("reps").innerHTML += "5.0 – 5.9: " + promedios.GeneralProm[1] + "<br>";
-    document.getElementById("reps").innerHTML += "6.0 – 6.9: " + promedios.GeneralProm[2] + "<br>";
-    document.getElementById("reps").innerHTML += "7.0 – 7.9: " + promedios.GeneralProm[3] + "<br>";
-    document.getElementById("reps").innerHTML += "8.0 – 8.9: " + promedios.GeneralProm[4] + "<br>";
-    document.getElementById("reps").innerHTML += "9.0 – 10: " + promedios.GeneralProm[5] + "<br>";
+    document.getElementById("reps").innerHTML += "Reprobados: " + TablaResultados.Reprobados + "<br>";
+    document.getElementById("reps").innerHTML += "0 – 49: " + TablaResultados.GeneralProm[0] + "<br>";
+    document.getElementById("reps").innerHTML += "5.0 – 5.9: " + TablaResultados.GeneralProm[1] + "<br>";
+    document.getElementById("reps").innerHTML += "6.0 – 6.9: " + TablaResultados.GeneralProm[2] + "<br>";
+    document.getElementById("reps").innerHTML += "7.0 – 7.9: " + TablaResultados.GeneralProm[3] + "<br>";
+    document.getElementById("reps").innerHTML += "8.0 – 8.9: " + TablaResultados.GeneralProm[4] + "<br>";
+    document.getElementById("reps").innerHTML += "9.0 – 10: " + TablaResultados.GeneralProm[5] + "<br>";
 
 }
