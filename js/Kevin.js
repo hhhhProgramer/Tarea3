@@ -1,3 +1,3 @@
 function HowIam() {
-    document.getElementById("test").innerHTML = "pto kevin xd"
+    document.getElementById("test").innerHTML = "debi agarrar psicologia :("
 }
