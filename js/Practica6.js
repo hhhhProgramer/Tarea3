@@ -1,3 +1,10 @@
+function GetInfoVentas(ventas) {
+    for (var i = 0; i < ventas.lengt; i++) {
+
+    }
+}
+
+
 function GetVentas() {
     var Ventas = [
         [5, 16, 10, 12, 24]
@@ -13,4 +20,11 @@ function GetVentas() {
         [50, 3, 24, 15, 82]
         [40, 46, 15, 46, 22]
     ];
+
+
+
+
+
+
+
 }
