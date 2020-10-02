@@ -13,46 +13,45 @@ function GetSuma(matriz, matriz2) {
     return suma;
 }
 
-function GetResta() {
-    var resta = new Array[2][2];
+function GetResta(matriz, matriz2) {
+    var resta = [
+        [0, 0],
+        [0, 0]
+    ];
 
-    for (var i = 0; i < numeros.length; i++) {
-        for (var e = 0; e < numeros[i].length; e++) {
-            var arreglo = numeros[i][e];
-
-            resta[i][e] = parcial.matriz[i][e] - parcial.matriz2[i][e];
-
+    for (var i = 0; i < 2; i++) {
+        for (var e = 0; e < 2; e++) {
+            resta[i][e] = matriz[i][e] - matriz2[i][e];
         }
     }
 
     return resta;
 }
 
-function GetProducto() {
-    var producto = new Array[2][2];
+function GetProducto(matriz, matriz2) {
+    var producto = [
+        [0, 0],
+        [0, 0]
+    ];
 
-    for (var i = 0; i < numeros.length; i++) {
-        for (var e = 0; e < numeros[i].length; e++) {
-            var arreglo = numeros[i][e];
-
-            producto[i][e] = parcial.matriz[i][e] * parcial.matriz2[i][e];
-
+    for (var i = 0; i < 2; i++) {
+        for (var e = 0; e < 2; e++) {
+            producto[i][e] = matriz[i][e] * matriz2[i][e];
         }
     }
+
     return producto;
 }
 
 function GetDivision(matriz, matriz2) {
     var div = [
-        [0, 0][0, 0]
+        [0, 0],
+        [0, 0]
     ];
 
-    for (var i = 0; i < numeros.length; i++) {
-        for (var e = 0; e < numeros[i].length; e++) {
-            var arreglo = numeros[i][e];
-
-            div[i][e] = parcial.matriz[i][e] / parcial.matriz2[i][e];
-
+    for (var i = 0; i < 2; i++) {
+        for (var e = 0; e < 2; e++) {
+            div[i][e] = matriz[i][e] / matriz2[i][e];
         }
     }
 
@@ -72,7 +71,10 @@ function InfoPartials() {
     ];
 
     var respuestas = GetSuma(matriz, matriz2);
-
+    var respuestas1 = GetResta(matriz, matriz2);
+    var respuestas2 = GetProducto(matriz, matriz2);
+    var respuestas3 = GetDivision(matriz, matriz2);
+    
     document.getElementById("test").innerHTML += "Resultado <br>";
 
     document.getElementById("test").innerHTML += "Suma: " + respuestas[0][0] + "<br>";
@@ -80,6 +82,20 @@ function InfoPartials() {
     document.getElementById("test").innerHTML += "Suma: " + respuestas[1][0] + "<br>";
     document.getElementById("test").innerHTML += "Suma: " + respuestas[1][1] + "<br>";
 
+    document.getElementById("test").innerHTML += "Resta: " + respuestas1[0][0] + "<br>";
+    document.getElementById("test").innerHTML += "Resta: " + respuestas1[0][1] + "<br>";
+    document.getElementById("test").innerHTML += "Resta: " + respuestas1[1][0] + "<br>";
+    document.getElementById("test").innerHTML += "Resta: " + respuestas1[1][1] + "<br>";
+
+    document.getElementById("test").innerHTML += "Producto: " + respuestas2[0][0] + "<br>";
+    document.getElementById("test").innerHTML += "Producto: " + respuestas2[0][1] + "<br>";
+    document.getElementById("test").innerHTML += "Producto: " + respuestas2[1][0] + "<br>";
+    document.getElementById("test").innerHTML += "Producto: " + respuestas2[1][1] + "<br>";
+
+    document.getElementById("test").innerHTML += "Division: " + respuestas3[0][0] + "<br>";
+    document.getElementById("test").innerHTML += "Division: " + respuestas3[0][1] + "<br>";
+    document.getElementById("test").innerHTML += "Division: " + respuestas3[1][0] + "<br>";
+    document.getElementById("test").innerHTML += "Division: " + respuestas3[1][1] + "<br>";
 
 
 
