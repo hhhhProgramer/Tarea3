@@ -1,19 +1,19 @@
-function GetSuma() {
-    var suma = new Array[2][2];
+function GetSuma(matriz, matriz2) {
+    var suma = [
+        [0, 0],
+        [0, 0]
+    ];
 
-    for (var i = 0; i < numeros.length; i++) {
-        for (var e = 0; e < numeros[i].length; e++) {
-            var arreglo = numeros[i][e];
-
-            suma[i][e] = parcial.matriz[i][e] + parcial.matriz2[i][e];
-
+    for (var i = 0; i < 2; i++) {
+        for (var e = 0; e < 2; e++) {
+            suma[i][e] = matriz[i][e] + matriz2[i][e];
         }
     }
 
     return suma;
 }
 
-function GetResta(){
+function GetResta() {
     var resta = new Array[2][2];
 
     for (var i = 0; i < numeros.length; i++) {
@@ -28,7 +28,7 @@ function GetResta(){
     return resta;
 }
 
-function GetProducto(){
+function GetProducto() {
     var producto = new Array[2][2];
 
     for (var i = 0; i < numeros.length; i++) {
@@ -42,7 +42,7 @@ function GetProducto(){
     return producto;
 }
 
-function GetDivision(){
+function GetDivision() {
     var div = new Array[2][2];
 
     for (var i = 0; i < numeros.length; i++) {
@@ -58,7 +58,7 @@ function GetDivision(){
 }
 
 function InfoPartials() {
-    
+
     var matriz = [
         [10, 5],
         [8, 2]
@@ -69,13 +69,16 @@ function InfoPartials() {
         [6, 8]
     ];
 
-    var respuestas = GetSuma();
-    
+    var respuestas = GetSuma(matriz, matriz2);
+
     document.getElementById("test").innerHTML += "Resultado <br>";
 
-    document.getElementById("test").innerHTML += "Suma: " + respuestas.suma + "<br>";
-    document.getElementById("test").innerHTML += "Resta: " + respuestas.resta + "<br>";
-    document.getElementById("test").innerHTML += "Producto: " + respuestas.producto + "<br>";
-    document.getElementById("test").innerHTML += "Divison: " + respuestas.div + "<br>";
+    document.getElementById("test").innerHTML += "Suma: " + respuestas[0][0] + "<br>";
+    document.getElementById("test").innerHTML += "Suma: " + respuestas[0][1] + "<br>";
+    document.getElementById("test").innerHTML += "Suma: " + respuestas[1][0] + "<br>";
+    document.getElementById("test").innerHTML += "Suma: " + respuestas[1][1] + "<br>";
+
+
+
 
 }
