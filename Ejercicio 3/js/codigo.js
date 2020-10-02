@@ -1,5 +1,5 @@
 function GetSuma(matriz,matriz2) {
-    var suma = new Array[2][2];
+    var suma = [[0,0][0,0]];
 
     for (var i = 0; i < numeros.length; i++) {
         for (var e = 0; e < numeros[i].length; e++) {
@@ -14,7 +14,7 @@ function GetSuma(matriz,matriz2) {
 }
 
 function GetResta(matriz,matriz2){
-    var resta = new Array[2][2];
+    var resta = [[0,0][0,0]];
 
     for (var i = 0; i < numeros.length; i++) {
         for (var e = 0; e < numeros[i].length; e++) {
@@ -29,7 +29,7 @@ function GetResta(matriz,matriz2){
 }
 
 function GetProducto(matriz,matriz2){
-    var producto = new Array[2][2];
+    var producto = [[0,0][0,0]];
 
     for (var i = 0; i < numeros.length; i++) {
         for (var e = 0; e < numeros[i].length; e++) {
@@ -43,7 +43,7 @@ function GetProducto(matriz,matriz2){
 }
 
 function GetDivision(matriz,matriz2){
-    var div = new Array[2][2];
+    var div = [[0,0][0,0]];
 
     for (var i = 0; i < numeros.length; i++) {
         for (var e = 0; e < numeros[i].length; e++) {
