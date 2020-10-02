@@ -42,8 +42,10 @@ function GetProducto() {
     return producto;
 }
 
-function GetDivision() {
-    var div = new Array[2][2];
+function GetDivision(matriz, matriz2) {
+    var div = [
+        [0, 0][0, 0]
+    ];
 
     for (var i = 0; i < numeros.length; i++) {
         for (var e = 0; e < numeros[i].length; e++) {
