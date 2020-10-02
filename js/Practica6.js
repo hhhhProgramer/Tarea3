@@ -1,12 +1,17 @@
 function GetInfoVentas(ventas) {
     var ProductosVendidos = {
         Mejor: ventas[0][0],
-        Peor: ventas[0][0]
+        Peor: ventas[0][0],
+        Total: 0,
+        Semanas: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     };
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    for (var i = 0; i < ventas.length; i++) {
+        ProductosVendidos.Semanas[i] = ventas[i].reduce(reducer);
 
-    for (var i = 0; i < numeros.length; i++) {
-        for (var e = 0; e < numeros[i].length; e++) {
-            var venta = numeros[i][e];
+        for (var e = 0; e < ventas[i].length; e++) {
+            var venta = ventas[i][e];
+            ProductosVendidos.Total += venta;
 
             if (venta > ProductosVendidos.Mejor)
                 ProductosVendidos.Mejor = venta;
@@ -38,8 +43,17 @@ function GetVentas() {
 
     var ventas = GetInfoVentas(TablaVentas);
 
-    document.getElementById("test").innerHTML += "Peor: " + ventas.Mejor + "<br>";
-    document.getElementById("test").innerHTML += "Mejor: " + ventas.Peor + "<br>";
+    document.getElementById("test").innerHTML = " ";
+    document.getElementById("test").innerHTML += "Mejor: " + ventas.Mejor + "<br>";
+    document.getElementById("test").innerHTML += "Peor: " + ventas.Peor + "<br>";
+    document.getElementById("test").innerHTML += "Total: " + ventas.Total + "<br>";
+
+    var i = 0;
+    ventas.Semanas.forEach(semana => {
+        document.getElementById("test").innerHTML += "Semana " + ++i + ": " + semana + "<br>";
+    })
+
+
 
 
 
