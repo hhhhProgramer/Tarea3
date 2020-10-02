@@ -5,7 +5,7 @@ function GetSuma() {
         for (var e = 0; e < numeros[i].length; e++) {
             var arreglo = numeros[i][e];
 
-            suma = parcial.arreglos[i][e] + parcial.arreglos[i][e];
+            suma[i][e] = parcial.matriz[i][e] + parcial.matriz2[i][e];
 
         }
     }
@@ -13,14 +13,14 @@ function GetSuma() {
     return suma;
 }
 
-function GetResta(arreglos){
+function GetResta(){
     var resta = new Array[2][2];
 
     for (var i = 0; i < numeros.length; i++) {
         for (var e = 0; e < numeros[i].length; e++) {
             var arreglo = numeros[i][e];
 
-            resta = parcial.arreglos[i][e] - parcial.arreglos[i][e];
+            resta[i][e] = parcial.matriz[i][e] - parcial.matriz2[i][e];
 
         }
     }
@@ -28,28 +28,28 @@ function GetResta(arreglos){
     return resta;
 }
 
-function GetProducto(arreglos){
+function GetProducto(){
     var producto = new Array[2][2];
 
     for (var i = 0; i < numeros.length; i++) {
         for (var e = 0; e < numeros[i].length; e++) {
             var arreglo = numeros[i][e];
 
-            producto = parcial.arreglos[i][e] * parcial.arreglos[i][e];
+            producto[i][e] = parcial.matriz[i][e] * parcial.matriz2[i][e];
 
         }
     }
     return producto;
 }
 
-function GetDivision(arreglo){
+function GetDivision(){
     var div = new Array[2][2];
 
     for (var i = 0; i < numeros.length; i++) {
         for (var e = 0; e < numeros[i].length; e++) {
             var arreglo = numeros[i][e];
 
-            div = parcial.arreglos[i][e] / parcial.arreglos[i][e];
+            div[i][e] = parcial.matriz[i][e] / parcial.matriz2[i][e];
 
         }
     }
@@ -59,15 +59,23 @@ function GetDivision(arreglo){
 
 function InfoPartials() {
     
-    var arreglos = [[10, 5],[8, 2],[2,3],[6,8]];
+    var matriz = [
+        [10, 5],
+        [8, 2]
+    ];
 
-    var ceros = OnGet(arreglos);
+    var matriz2 = [
+        [2, 3],
+        [6, 8]
+    ];
 
+    var respuestas = GetSuma();
+    
     document.getElementById("test").innerHTML += "Resultado <br>";
 
-    document.getElementById("test").innerHTML += "Suma: " + ceros.suma + "<br>";
-    document.getElementById("test").innerHTML += "Resta: " + ceros.resta + "<br>";
-    document.getElementById("test").innerHTML += "Producto: " + ceros.producto + "<br>";
-    document.getElementById("test").innerHTML += "Divison: " + ceros.div + "<br>";
+    document.getElementById("test").innerHTML += "Suma: " + respuestas.suma + "<br>";
+    document.getElementById("test").innerHTML += "Resta: " + respuestas.resta + "<br>";
+    document.getElementById("test").innerHTML += "Producto: " + respuestas.producto + "<br>";
+    document.getElementById("test").innerHTML += "Divison: " + respuestas.div + "<br>";
 
 }
