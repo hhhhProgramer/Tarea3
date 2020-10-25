@@ -1,0 +1,108 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Entities >= 1.0.0",
+      "Repositories >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/hhhh/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/View/View.csproj",
+      "projectName": "View",
+      "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/View/View.csproj",
+      "packagesPath": "/home/hhhh/.nuget/packages/",
+      "outputPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/View/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/hhhh/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj": {
+              "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj"
+            },
+            "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/Repositories.csproj": {
+              "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/Repositories.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

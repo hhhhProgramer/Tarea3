@@ -1,0 +1,175 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/View/View.csproj": {}
+  },
+  "projects": {
+    "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj",
+        "packagesPath": "/home/hhhh/.nuget/packages/",
+        "outputPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/hhhh/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/Repositories.csproj",
+        "projectName": "Repositories",
+        "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/Repositories.csproj",
+        "packagesPath": "/home/hhhh/.nuget/packages/",
+        "outputPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/hhhh/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj": {
+                "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/View/View.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/View/View.csproj",
+        "projectName": "View",
+        "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/View/View.csproj",
+        "packagesPath": "/home/hhhh/.nuget/packages/",
+        "outputPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/View/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/hhhh/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj": {
+                "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Entities/Entities.csproj"
+              },
+              "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/Repositories.csproj": {
+                "projectPath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

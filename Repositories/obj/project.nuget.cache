@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z14cr1V5p+t4XM+JhH4yS455mI61pIlfEnX2HQbXPSnDr6GnBHMJd9biVyr8W8m7lEqzQdHoLeN+AhbgaHq0Ng==",
+  "success": true,
+  "projectFilePath": "/home/hhhh/Documentos/Backups/Files/Tareas/Estructura de datos/2Partial/Practica 2/Ejercicio 1/Repositories/Repositories.csproj",
+  "expectedPackageFiles": [
+    "/home/hhhh/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/hhhh/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
